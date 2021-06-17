@@ -4,10 +4,11 @@ body{
 
 .grey_background{
     padding-bottom: 250px;
-    background-image:  url('../images/wallpaper.jpg');
+    background-image:  url('../images/pexels-suzy-hazelwood-1329645.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;   
+    color: white;
 }
 
 .call_to_action
@@ -30,15 +31,20 @@ body{
     padding-right: 18px;
 }
 
+.nav{
+    padding-top: 20px;
+}
+
 .nav > div > a{
     color: black;
-    padding-right: 15px;
+    padding-right: 25px;
     text-decoration: none;
     font-size: 20px;
 }
 
 .nav > div {
-    padding-right: 20px;
+    
+    margin-left: 50px;
 }
 
 .call_to_action{

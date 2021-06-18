@@ -1,5 +1,21 @@
+@import "pricing.css";
 body{
     background-color: dimgray;
+}
+.cstm-height-card .card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+.text-cursive {
+  font-family: "Indie Flower", cursive !important; }
+
+#mb_parallax_1 {
+  background-image: url(https://picsum.photos/700/300/);
+}
+.mb_parallax_container {
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .grey_background{
@@ -7,7 +23,7 @@ body{
     background-image:  url('../images/pexels-suzy-hazelwood-1329645.jpg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;   
+    background-size: cover;
     color: white;
 }
 
@@ -43,7 +59,7 @@ body{
 }
 
 .nav > div {
-    
+
     margin-left: 50px;
 }
 

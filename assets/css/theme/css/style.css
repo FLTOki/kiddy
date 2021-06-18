@@ -430,6 +430,11 @@ a {
         #section07 a {
           padding-top: 60px;
         }
+          @media (max-width: 991.98px) {
+            #section07 a {
+              padding-top: 80px !important;
+            }
+          }
         #section07 a span {
           position: absolute;
           top: 0;

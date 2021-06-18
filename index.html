@@ -102,28 +102,19 @@
           <center>  <section id="section07" class="demo">
   <a href="#section08"><span></span><span></span><span></span></a>
 </section></center>
-
           </div>
         </div>
       </div>
     </div>
-<a href="#" id="scroll" style="display: enone;"><span>ved</span></a>
-<script>
+    <button
+        type="button"
+        class="btn btn-primary btn-floating btn-lg"
+        id="btn-back-to-top"
+        >
+  <i class="fas fa-arrow-up"></i>
+</button>
 
-$(document).ready(function(){
-  $(window).scroll(function(){
-      if ($(this).scrollTop() > 100) {
-          $('#scroll').fadeIn();
-      } else {
-          $('#scroll').fadeOut();
-      }
-  });
-  $('#scroll').click(function(){
-      $("html, body").animate({ scrollTop: 0 }, 600);
-      return false;
-  });
-});
-</script>
+
     <div class="white_background">
       <div class="container">
         <h2 class="justify-content-center">Some of our top Games</h2>
@@ -484,5 +475,6 @@ holidays, animals, people and many other fun clipart themes.
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/jquery.sticky.js"></script>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/scroll.js"></script>
   </body>
 </html>

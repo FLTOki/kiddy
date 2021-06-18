@@ -22,21 +22,22 @@ body{
   font-family: "Indie Flower", cursive !important; }
 
 #mb_parallax_1 {
-  background-image: url(https://picsum.photos/700/300/);
+  background-image: url(../images/thumbs/bg5.jpg);
 }
 .mb_parallax_container {
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
+
 }
 
 .grey_background{
-    padding-bottom: 250px;
-    background-image:  url('../images/pexels-suzy-hazelwood-1329645.jpg');
+    padding-top: 150px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
+    padding: 10px;
 }
 
 .call_to_action

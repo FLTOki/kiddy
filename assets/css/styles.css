@@ -6,6 +6,18 @@ body{
   height: 200px;
   object-fit: cover;
 }
+.mw5{
+  margin-bottom: 8px !important;
+}
+.footer{
+  margin-top: 25px !important;
+}
+.btn-custom-1 {
+    border-radius: 30px !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    padding: 10px 20px !important;
+}
 .text-cursive {
   font-family: "Indie Flower", cursive !important; }
 

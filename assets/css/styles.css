@@ -3,8 +3,8 @@ body{
     background-color: dimgray;
 }
 .cstm-height-card .card-img-top {
-  height: 200px;
-  object-fit: cover;
+  height: 15vw;
+    object-fit: cover;
 }
 .mw5{
   margin-bottom: 8px !important;

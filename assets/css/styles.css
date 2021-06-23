@@ -1,4 +1,10 @@
 @import "pricing.css";
+#logoimg , #logotxt {
+        vertical-align: middle;
+        display: flex;
+        align-items: center; /* Vertical */
+  justify-content: center; 
+    }
 body{
     background-color: dimgray;
 }

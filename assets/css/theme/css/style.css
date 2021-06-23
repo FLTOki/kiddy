@@ -98,6 +98,14 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.hero1 {
+  height: 100vh;
+  width: 100%;
+  background-color: #b2b2b2;
+  background-image: url(../../../images/color3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 .site-navbar {
   margin-bottom: 0px;

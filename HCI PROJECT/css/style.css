@@ -1,0 +1,361 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+
+/*Start:Global style rules*/
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    line-height: 1.5;
+    font-weight: 300;
+    margin: 0.5em 0;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2.0em;
+}
+
+h3 {
+    font-size: 1.6em;
+}
+
+h4 {
+    font-size: 1.4em;
+}
+
+h5 {
+    font-size: 1.2em;
+}
+
+a {
+    text-decoration: none;
+}
+
+p,
+label,
+strong {
+    line-height: 2;
+    font-size: 0.85;
+    font-weight: 300;
+}
+
+.flex {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    justify-content: space-between;
+}
+
+.badge {
+    padding: 9px 12px;
+    color: #eee;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    font-size: 0.75em;
+}
+
+.badge.new {
+    background-color: rgb(128, 0, 43);
+}
+
+.badge.math {
+    background-color: rgb(128, 47, 0);
+}
+
+.badge.language {
+    background-color: rgb(172, 127, 5);
+}
+
+.badge.puzzle {
+    background-color: rgb(110, 146, 11);
+}
+
+.badge.music {
+    background-color: rgb(8, 124, 124);
+}
+
+.shade {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+
+
+/*end global style rules*/
+
+
+/*start header rules*/
+
+header {
+    background-color: whitesmoke;
+    padding: 1px 0;
+    position: relative;
+    border-bottom: 3px solid rgb(11, 4, 43);
+}
+
+.hamburger-menu {
+    background-color: transparent;
+    border: 1px solid rgb(21, 6, 73);
+    padding: 1px 5px;
+    width: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger-menu .strip {
+    display: block;
+    height: 10px;
+    background-color: yellow;
+    margin: 4px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+nav ul li {
+    display: inline-block;
+    font-size: 1.5em;
+    margin: 0 18px;
+}
+
+nav ul li a {
+    color: rgba(15, 3, 49, 0.938);
+}
+
+nav ul li a:hover {
+    color: whitesmoke;
+    background-color: rgba(250, 175, 14, 0.938);
+}
+
+#login-register-button {
+    background-color: rgba(250, 175, 14, 0.938);
+    color: black;
+    border-radius: 20px;
+    padding: 18px 15px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+
+/*end of header styles*/
+
+
+/*start hero styles*/
+
+#hero-image {
+    background: url('../images/color3.jpg') top left no-repeat;
+    height: 500px;
+    background-size: 100%;
+}
+
+.hero-marketing-text {
+    max-width: 1200px;
+    margin: -30px auto 0;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    padding: 0 20px;
+}
+
+.hero-marketing-text h1 {
+    color: white;
+    font-size: 3.5em;
+    font-weight: 300;
+    margin: 0.5em 0;
+}
+
+.hero-marketing-text span {
+    color: rgba(250, 175, 14, 0.938);
+}
+
+.hero-marketing-text h3 {
+    color: white;
+    font-size: 1em;
+    font-weight: 300;
+    max-width: 500px;
+    line-height: 2;
+    margin-bottom: 2.5em;
+}
+
+.hero-marketing-text button {
+    background-color: rgba(250, 175, 14, 0.938);
+    color: black;
+    border-radius: 25px;
+    padding: 15px 25px;
+    font-size: 0.85em;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+
+/*end*/
+
+
+/*start latest news section*/
+
+#latest-news {
+    margin-bottom: 75px;
+}
+
+#latest-news .flex {
+    justify-content: flex-start;
+    max-width: 100%;
+    padding: 0;
+}
+
+#latest-news .flex h4 {
+    flex-basis: 25%;
+    background-color: rgba(250, 175, 14, 0.938);
+    padding: 25px;
+    margin: 0;
+    text-align: right;
+    color: white;
+    font-size: 1.2em;
+}
+
+#latest-news-container {
+    background-color: white;
+    position: relative;
+    flex-basis: 75%;
+    padding: 2%;
+}
+
+#latest_news_container.latest_news_text {
+    color: black;
+}
+
+
+/*end latest news section*/
+
+
+/*start of new games*/
+
+#game-type-boxs {
+    margin-bottom: 75px;
+}
+
+#game-type-boxes .box {
+    flex-basis: 25%;
+    position: relative;
+    height: 380px;
+}
+
+#game-type-boxes .box.math {
+    background: url('../images/math.jpg')top center no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+}
+
+#game-type-boxes .box.read {
+    background: url('../images/language.gif')top center no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+}
+
+#game-type-boxes .box.puzzle {
+    background: url('../images/letters2.jpg')top center no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+}
+
+#game-type-boxes .box.music {
+    background: url('../images/sing.jpg')top center no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+}
+
+#game-type-boxes .box .badge {
+    position: relative;
+    z-index: 2;
+    top: 20px;
+    left: -15px;
+    border-radius: 25px;
+}
+
+#game-type-boxes .contents {
+    position: absolute;
+    z-index: 3;
+    bottom: 20px;
+    color: white;
+    padding: 0 35px 0 25px;
+}
+
+#game-type-boxes .contents a {
+    font-size: 0.8em;
+    font-weight: 300;
+    color: white;
+}
+
+
+/*end of new games*/
+
+
+/*start recent games*/
+
+#recent-games {
+    background: url('../images/babys.png')top center no-repeat;
+    background-size: 100%;
+    background-color: lightgray;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    padding: 70px 0 120px;
+}
+
+#recent-games h1 {
+    text-align: center;
+}
+
+#recent-games .box {
+    position: relative;
+    flex-basis: 31%;
+    background-color: white;
+}
+
+#recent-games .box .badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+}
+
+#recent-games .box img {
+    width: 100%;
+}
+
+#recent-games .box .box-lower-section {
+    padding: 20px;
+}
+
+#recent-games .box .box-lower-section p {
+    color: white;
+}
+
+#recent-games .box .box-lower-section a {
+    color: gray;
+    font-size: 0.8em;
+}
+
+
+/*end of recent games*/

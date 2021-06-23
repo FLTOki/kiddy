@@ -4,169 +4,381 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="assets/css/node_modules/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="assets/css/node_modules/bootstrap/dist/css/bootstrap.css"/>
     <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <!-- Theme -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans:300,400,700|Indie+Flower" rel="stylesheet">
+    <link rel="stylesheet" href="assets/fonts/icomoon/style.css">
+    <link rel="stylesheet" href="assets/css/theme/css/owl.carousel.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/theme/css/bootstrap.min.css">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="assets/css/theme/css/style.css">
     <title>Funbrain</title>
   </head>
   <body>
-    <div class="grey_background">
-      <div class="app_name">
-        <div class="more_details float-right">
-          <p class="pl-5 location">
-            Location: <br />
-            16th and Ridge Boulevard
-          </p>
-          <p>
-            Date: <br />
-            16 June 2021
-          </p>
-        </div>
-      </div>
 
-      <div class="container">
-        <div class="nav d-flex">
-            <div class="links">
-                <a href="">
-                    <h2 >Funbrain</h2>
-                </a>
+<!-- Navigation start -->
+        <div class="site-mobile-menu site-navbar-target">
+          <div class="site-mobile-menu-header">
+            <div class="site-mobile-menu-close mt-3">
+              <span class="icon-close2 js-menu-toggle"></span>
             </div>
-          <div class="links">
-            <a href="#">Home</a>
           </div>
-          <div class="links">
-            <a href="#">Activities</a>
-          </div>
-          <div class="links">
-            <a href="#">Games</a>
-          </div>
-          <div class="links">
-            <a href="#">Packages</a>
-          </div>
+          <div class="site-mobile-menu-body"></div>
         </div>
-      </div>
 
-      <hr />
 
-      <div class="container">
-        <div class="call_to_action">
-          <p>Welcome to Funbrain</p>
-          <h2>Learn while having fun</h2>
-          <p>No. 1 online playground</p>
+        <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
 
-          <button class="btn btn-primary">Learn More</button>
+          <div class="container">
+            <div class="row align-items-center">
+
+              <div class="col-6 col-xl-2">
+                <h1 class="mb-0 site-logo"><a href="index.html">Funbrain<span class="text-primary">.</span> </a></h1>
+              </div>
+
+              <div class="col-12 col-md-10 d-none d-xl-block">
+                <nav class="site-navigation position-relative text-right" role="navigation">
+
+                  <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                    <li><a href="#home-section" class="nav-link">Home</a></li>
+                    <li class="has-children">
+                      <a href="#about-section" class="nav-link">Products</a>
+                      <ul class="dropdown">
+                        <li class="has-children">
+                          <a href="#">Games</a>
+                          <ul class="dropdown">
+                            <li><a href="#">Fun Games</a></li>
+                            <li><a href="#">Educational Games</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#pricing-section" class="nav-link">Clipart</a></li>
+                        <li><a href="#faq-section" class="nav-link">Coloring Books</a></li>
+                        <li><a href="#gallery-section" class="nav-link">Learning Materials</a></li>
+                        <li><a href="#services-section" class="nav-link">Puzzles</a></li>
+                        <li><a href="#testimonials-section" class="nav-link">Fun Room</a></li>
+                      </ul>
+                    </li>
+
+                    <li class="has-children">
+                      <a href="#about-section" class="nav-link">About Us</a>
+                      <ul class="dropdown">
+                        <li><a href="#team-section" class="nav-link">About</a></li>
+                        <li><a href="#team-section" class="nav-link">Team</a></li>
+                        <li class="has-children">
+                          <a href="#">More</a>
+                          <ul class="dropdown">
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Packages</a></li>
+                            <li><a href="#">Online Support</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a href="#blog-section" class="nav-link">Blog</a></li>
+                    <li><a href="#contact-section" class="nav-link">Contact</a></li>
+                    <li class="social"><a href="#contact-section" class="nav-link"><span class="icon-facebook"></span></a></li>
+                    <li class="social"><a href="#contact-section" class="nav-link"><span class="icon-twitter"></span></a></li>
+                    <li class="social"><a href="#contact-section" class="nav-link"><span class="icon-linkedin"></span></a></li>
+                  </ul>
+                </nav>
+              </div>
+
+
+              <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
+
+            </div>
+          </div>
+
+        </header>
+<!-- End of navigation -->
+    <div class="hero">
+      <div class="site-section-cover overlay">
+        <div class="container">
+          <div class="row align-items-center ">
+            <div class="col-md-5 mt-5 pt-5">
+              <span class="text-cursive h5 text-white">Welcome to Funbrain</span>
+              <h1 class="mb-3 font-weight-bold text-white">Learn while having fun</h1>
+              <p class="text-white">No. 1 online playground</p>
+              <button class="btn btn-primary btn-custom-1">Learn More</button>
+            </div>
+            <!--<div class="col-md-6 ml-auto align-self-end">
+              <img src="assets/images/thumbs/bg1.png" alt="Image" class="img-fluid">
+
+            </div>-->
+          <center>  <section id="section07" class="demo">
+  <a href="#section08"><span></span><span></span><span></span></a>
+</section></center>
+          </div>
         </div>
       </div>
     </div>
+    <button
+        type="button"
+        class="btn btn-primary btn-floating btn-lg"
+        id="btn-back-to-top"
+        >
+  <i class="fas fa-arrow-up"></i>
+</button>
 
+<div id="section08"></div>
     <div class="white_background">
       <div class="container">
-        <h2 class="justify-content-center">Some of our Games</h2>
-        <div class="row justify-content-around">
+        <h2 class="justify-content-center">Some of our top Games</h2>
+        <div class="row mb-5 cstm-height-card">
+			<div class="col-md-4 mw5">
+				<div class="card h-100">
+          <img src="assets/images/thumbs/logrun.gif" class="card-img-top" alt="..." />
+          <div class="card-body">
+						<h5 class="card-title">Log Run</h5>
+						<p class="card-text">Jump and duck to dodge obstacles.</p>
+						<a href="#" class="btn btn-sm btn-primary btn-custom-1"><i class="fa fa-gamepad"></i> Play Now</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 mw5">
+				<div class="card h-100">
+          <img src="assets/images/thumbs/math.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+						<h5 class="card-title">Math Soccer</h5>
+						<p class="card-text">Score goals by answering math problems!</p>
+						<a href="#" class="btn btn-sm btn-primary btn-custom-1"><i class="fa fa-gamepad"></i> Play Now</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 mw5">
+				<div class="card h-100">
+          <img src="assets/images/thumbs/spell.gif" class="card-img-top" alt="..." />
+          <div class="card-body">
+						<h5 class="card-title">Spellaroo</h5>
+						<p class="card-text">Help Spellaroo with his spelling!</p>
+						<a href="#" class="btn btn-sm btn-primary btn-custom-1"><i class="fa fa-gamepad"></i> Play Now</a>
+					</div>
+				</div>
+			</div>
+		</div>
+      </div>
+    </div>
 
-          <div class="col-3">
-            <div class="card" style="width: 18rem">
-              <img src="assets/images/9-Snakes-and-Ladders-Varieties-Modern-Vintage-and-Out-of-the-Box-e1484047846592-1024x614.jpg" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Game Title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the Game Title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
+    <div class="container">
+      <div class="site-section bg-light">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 mb-5 mb-md-0">
+              <img src="assets/images/thumbs/bg5.jpg" alt="Image" class="img-fluid">
+            </div>
+            <div class="col-md-5 ml-auto pl-md-5">
+              <span class="text-cursive h5 text-red">About Us</span>
+              <h3 class="text-black">Bring Fun Life To Your Kids</h3>
+              <p><span>Hundreds of free kids games, puzzles, activities, coloring pages, clip art & more for children, families, parents, teachers...</span>
+                <span>Kids of all ages are invited to play! We also have free online games, puzzles and kids printables in the kids games & activities sections! New educational and fun games, activities and printables added on a regular basis for kids, schools and family fun.</span></p>
+
+              <p class="mt-5"><a href="#" class="btn btn-warning py-3 btn-custom-1">More About Us</a></p>
             </div>
           </div>
-
-          <div class="col-3">
-            <div class="card" style="width: 18rem">
-              <img src="assets/images/9-Snakes-and-Ladders-Varieties-Modern-Vintage-and-Out-of-the-Box-e1484047846592-1024x614.jpg" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Game Title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the Game Title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-3">
-            <div class="card" style="width: 18rem">
-              <img src="assets/images/9-Snakes-and-Ladders-Varieties-Modern-Vintage-and-Out-of-the-Box-e1484047846592-1024x614.jpg" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Game Title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the Game Title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
     </div>
 
-    <div class="light_grey_background">
-        <div class="container">
-            <div class="row about_us">
-                <div class="col-md-6 ">
-                    <img src="assets/images/happy-kids.jpg" alt="" width="500px" height="500px">
-                </div>
-                <div class="col-md-6 about_intro">
-                   <p> About Us</p>
-                   <h3>Bring Fun Life To Your Kids</h3>
-                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et harum, magni sequi nostrum maxime enim.Magnam id atque dicta deleniti, ipsam ipsum distinctio. Facilis praesentium voluptatem accusamus, earum veritatis, laudantium.</p>
-                </div>
-            </div>
-        </div>
+<div class="white_background">
+  <h1 class="demo-title">
+Our Pricing<br><br>
+</h1>
+<div class="pricing-table">
+<div class="ptable-item">
+  <div class="ptable-single">
+    <div class="ptable-header">
+      <div class="ptable-title">
+        <h2>Free</h2>
+      </div>
+      <div class="ptable-price">
+        <h2><small>$</small>0<span>/ M</span></h2>
+      </div>
     </div>
-
-    <div class="sky_blue_background">
-        <div class="container ">
-            <h3>Our packages include</h3>
-            <div class="row justify-content-around">
-                <div class="col-3">
-                    <div class="card" style="width: 18rem">
-                        <div class="image">
-                            <img src="assets/images/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg" alt="" width="150px">
-                        </div>
-                        <h4>Activity 1</h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore numquam deleniti repellendus, rerum iste consequatur, neque praesentium voluptate culpa itaque inventore sit corporis perspiciatis dolorum eligendi voluptatibus, recusandae magni repellat.</p>
-                        <button class="btn btn-primary">Learn More</button>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="card" style="width: 18rem">
-                        <div class="image">
-                            <img src="assets/images/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg" alt="" width="150px">
-                        </div>
-                        <h4>Activity 1</h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore numquam deleniti repellendus, rerum iste consequatur, neque praesentium voluptate culpa itaque inventore sit corporis perspiciatis dolorum eligendi voluptatibus, recusandae magni repellat.</p>
-                        <button class="btn btn-primary">Learn More</button>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="card" style="width: 18rem">
-                        <div class="image">
-                            <img src="assets/images/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg" alt="" width="150px">
-                        </div>
-                        <h4>Activity 1</h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore numquam deleniti repellendus, rerum iste consequatur, neque praesentium voluptate culpa itaque inventore sit corporis perspiciatis dolorum eligendi voluptatibus, recusandae magni repellat.</p>
-                        <button class="btn btn-primary">Learn More</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="ptable-body">
+      <div class="ptable-description">
+        <ul>
+          <li>Fun Games</li>
+          <li>Clip Arts</li>
+          <li>Learning</li>
+          <li>Puzzles</li>
+          <li>Fun Room</li>
+          <li>Online Support</li>
+        </ul>
+      </div>
     </div>
+    <div class="ptable-footer">
+      <div class="ptable-action">
+        <a href="" class="btn-custom-1">Start</a>
+      </div>
+    </div>
+  </div>
+</div>
 
+<div class="ptable-item featured-item">
+  <div class="ptable-single">
+    <div class="ptable-header">
+      <div class="ptable-status">
+        <span>Hot</span>
+      </div>
+      <div class="ptable-title">
+        <h2>Gold</h2>
+      </div>
+      <div class="ptable-price">
+        <h2><small>$</small>199<span>/ M</span></h2>
+      </div>
+    </div>
+    <div class="ptable-body">
+      <div class="ptable-description">
+        <ul>
+        <li>Fun Games</li>
+        <li>Clip Arts</li>
+        <li>Learning</li>
+        <li>Puzzles</li>
+        <li>Fun Room</li>
+        <li>Online Support</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ptable-footer">
+      <div class="ptable-action">
+        <a href="" class="btn-custom-1">Buy Now</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ptable-item">
+  <div class="ptable-single">
+    <div class="ptable-header">
+      <div class="ptable-title">
+        <h2>Platinum</h2>
+      </div>
+      <div class="ptable-price">
+        <h2><small>$</small>299<span>/ M</span></h2>
+      </div>
+    </div>
+    <div class="ptable-body">
+      <div class="ptable-description">
+        <ul>
+          <li>Fun Games</li>
+          <li>Clip Arts</li>
+          <li>Learning</li>
+          <li>Puzzles</li>
+          <li>Fun Room</li>
+          <li>Online Support</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ptable-footer">
+      <div class="ptable-action">
+        <a href="" class="btn-custom-1">Buy Now</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+<div class="container">
+  <h1 class="demo-title">
+Our Packages<br><br>
+</h1>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+
+  <div class="col-md-4">
+    <div class="card h-100">
+      <img
+        src="assets/images/thumbs/game.jpg"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <h5 class="card-title">Online Games</h5>
+        <p class="card-text">
+          We offer Online games for learning and fun
+        </p>
+      </div>
+      <div class="card-footer">
+        Categories:<small class="text-muted"> Puzzle, Word, Sports, Memory, and Board & Card Games</small>
+      </div>
+    </div>
+  </div><div class="col-md-4">
+    <div class="card h-100">
+      <img src="assets/images/thumbs/clip.jpg" class="card-img-top" alt="..."/>
+      <div class="card-body">
+        <h5 class="card-title">Clip Arts</h5>
+        <p class="card-text">
+          Over 2,000 free downloadable clipart images for kids, including
+holidays, animals, people and many other fun clipart themes.
+        </p>
+      </div>
+      <div class="card-footer">
+        Categories:<small class="text-muted"> Animals, Alphabet, Fruits, Holidays ...</small>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card h-100">
+      <img src="assets/images/thumbs/book.jpg" class="card-img-top"alt="..."/>
+      <div class="card-body">
+        <h5 class="card-title">Coloring Books</h5>
+        <p class="card-text">
+          Free printable and online coloring pages for kids for classroom & personal use.
+        </p>
+      </div>
+      <div class="card-footer">
+        Categories:<small class="text-muted"> Animals, Alphabet, Fruits, Holidays ...</small>
+      </div>
+    </div>
+  </div>
+
+</div>
+  <!-- row 2 -->
+<div class="row row-cols-1 row-cols-md-3 g-4" style="margin-top:8px!important">
+  <div class="col-md-4" >
+    <div class="card h-100">
+      <img
+        src="assets/images/thumbs/funroom.jpg"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <h5 class="card-title">Fun Room</h5>
+        <p class="card-text">
+          Other Fun Stuff We Just Couldn't Find Another Place For :)
+        </p>
+      </div>
+      <div class="card-footer">
+        Categories:<small class="text-muted"> Stories, Music, Movie Clips, Animations ...</small>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+
+  </div>
+  <div class="col">
+
+  </div>
+</div>
+
+</div>
+<style media="screen">
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+</style>
     <div class="footer">
         <!-- Footer -->
-<footer class="text-center text-lg-start bg-light text-muted">
+<footer id="footer" class="text-center text-lg-start bg-light text-muted">
     <!-- Section: Social media -->
     <section
       class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
@@ -176,7 +388,7 @@
         <span>Get connected with us on social networks:</span>
       </div>
       <!-- Left -->
-  
+
       <!-- Right -->
       <div>
         <a href="" class="me-4 text-reset">
@@ -201,7 +413,7 @@
       <!-- Right -->
     </section>
     <!-- Section: Social media -->
-  
+
     <!-- Section: Links  -->
     <section class="">
       <div class="container text-center text-md-start mt-5">
@@ -214,12 +426,11 @@
               <i class="fas fa-gem me-3"></i>Funbrain
             </h6>
             <p>
-              Here you can use rows and columns to organize your footer content. Lorem ipsum
-              dolor sit amet, consectetur adipisicing elit.
+              We offer Hundreds of free kids games, puzzles, activities, coloring pages, clip art & more for children, families, parents, teachers...
             </p>
           </div>
           <!-- Grid column -->
-  
+
           <!-- Grid column -->
           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
             <!-- Links -->
@@ -227,17 +438,20 @@
               Products
             </h6>
             <p>
-              <a href="#!" class="text-reset">Indoor games</a>
+              <a href="#!" class="text-reset">Games</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Outdoor Games</a>
+              <a href="#!" class="text-reset">Coloring Books</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Camping</a>
+              <a href="#!" class="text-reset">Cliparts</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Fun Room</a>
             </p>
           </div>
           <!-- Grid column -->
-  
+
           <!-- Grid column -->
           <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
             <!-- Links -->
@@ -251,13 +465,16 @@
               <a href="#!" class="text-reset">About us</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Games</a>
+              <a href="#!" class="text-reset">Videos</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Coloring Books</a>
             </p>
           </div>
           <!-- Grid column -->
-  
+
           <!-- Grid column -->
-          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <div class="col-md-4 mw5 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
             <!-- Links -->
             <h6 class="text-uppercase fw-bold mb-4">
               Contact
@@ -265,7 +482,7 @@
             <p><i class="fas fa-home me-3"></i> Madaraka, Nairobi, Kenya</p>
             <p>
               <i class="fas fa-envelope me-3"></i>
-              Funbraininfo@example.com
+              info@funbrain.co.ke
             </p>
             <p><i class="fas fa-phone me-3"></i> + 254 234 567 88</p>
             <p><i class="fas fa-print me-3"></i> + 254 234 567 89</p>
@@ -276,15 +493,22 @@
       </div>
     </section>
     <!-- Section: Links  -->
-  
+
     <!-- Copyright -->
     <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-      © 2021 Copyright:
-      <a class="text-reset fw-bold" href="#">Funbrain</a>
+      Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+      <a class="text-reset fw-bold" href="#">Funbrain</a>.
+      All rights reserved
     </div>
     <!-- Copyright -->
   </footer>
   <!-- Footer -->
     </div>
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.sticky.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/scroll.js"></script>
   </body>
 </html>

@@ -8,6 +8,9 @@
 body{
     background-color: dimgray;
 }
+.navo {
+  color: #007bff !important;
+}
 nav.stroke ul li a,
 nav.fill ul li a {
   position: relative;

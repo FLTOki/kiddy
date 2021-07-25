@@ -55,7 +55,7 @@ nav{
 	align-items: center;
 	justify-content: space-between;
 	padding: 1rem 0;
-	border-bottom: 1px solid rgba(255, 255, 255, .2); 
+	border-bottom: 1px solid rgba(255, 255, 255, .2);
 }
 
 .nav-brand{
@@ -234,7 +234,7 @@ footer{
 		left: 0;
 		bottom: -.5rem;
 		background-color: #fdbb2d;
-		width: 100%; 
+		width: 100%;
 		height: 2px;
 		transform: scaleX(0);
 		transform-origin: left;
@@ -260,18 +260,18 @@ footer{
  .class-for-Products{
   margin-bottom: 2rem;
 	background: #22c1c3;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #fdbb2d, #22c1c3);  
-	background: linear-gradient(to right, #fdbb2d, #22c1c3); 
+	background: -webkit-linear-gradient(to right, #fdbb2d, #22c1c3);
+	background: linear-gradient(to right, #fdbb2d, #22c1c3);
   text-align: center;
   font-size: large;
-  position: relative; 
+  position: relative;
   padding: 5px;
 
  }
 
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-.flip-card { 
+.flip-card {
   background-color: transparent;
   width: 270px;
   height: 200px;

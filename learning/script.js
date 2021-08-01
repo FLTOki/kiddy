@@ -140,6 +140,16 @@ new Vue({
       $('#'+id).attr('src',url);
 
     },
+    openFullscreen(id) {
+      var elem = document.getElementById(id);
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+      } else if (elem.webkitRequestFullscreen) { /* Safari */
+        elem.webkitRequestFullscreen();
+      } else if (elem.msRequestFullscreen) { /* IE11 */
+        elem.msRequestFullscreen();
+      }
+    },
     doubleUp() {
       //fake a bunch of data
       let localImages = JSON.parse(JSON.stringify(this.images))

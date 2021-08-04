@@ -1,3 +1,33 @@
+<?php
+session_start();
+include 'parentalcontroltest.php';
+$mysqli =connect_func();
+
+// SQL query to select data from database
+$sql = "SELECT * FROM user where user_id = 2";
+$result = $mysqli->query($sql);
+$result1 = $mysqli->query($sql);
+
+$mysqli->close();
+
+if(isset($_POST['save']))
+{
+    $parid=$_POST['userid'];
+    $firname=$_POST['fname'];
+    $secname=$_POST['sname'];
+    $kidage=$_POST['kage']; 
+    
+    enrol_kid_func($parid,$firname,$secname,$kidage);
+header('mykids.php');
+$_SESSION['message']= "Record has been saved";
+$_SESSION['msg_type']= "Success";
+
+
+}
+   
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -48,18 +78,26 @@
                     class="rounded-circle"
                     width="150"
                   />
+                  <?php // LOOP TILL END OF DATA
+          while ($rows = mysqli_fetch_array($result1)) {
+          ?>
                   <div class="mt-3">
-                    <h4>John Doe</h4>
-                    <p class="text-secondary mb-1">Test Parent</p>
+                    <h4><?php echo $rows['first_name']." ".$rows['last_name'] ; ?></h4>
+                    <p class="text-secondary mb-1">Parent</p>
                     <p class="text-muted font-size-sm">
-                      Madaraka, Nairobi, Kenya
+                    <?php echo $rows['Location']; ?>
                     </p>
                   </div>
+                  <?php }
+          ?>
                 </div>
               </div>
             </div>
           </div>
-
+          <?php // LOOP TILL END OF DATA
+          while ($rows = mysqli_fetch_array($result)) {
+          ?>
+         
           <div class="col-md-8">
             <div class="card mb-3">
               <div class="card-body">
@@ -67,28 +105,21 @@
                   <div class="col-sm-3">
                     <h6 class="mb-0">Full Name</h6>
                   </div>
-                  <div class="col-sm-9 text-secondary">Kenneth Valdez</div>
+                  <div class="col-sm-9 text-secondary"><?php echo $rows['first_name']; ?></div>
                 </div>
                 <hr />
                 <div class="row">
                   <div class="col-sm-3">
                     <h6 class="mb-0">Email</h6>
                   </div>
-                  <div class="col-sm-9 text-secondary">fip@jukmuh.al</div>
+                  <div class="col-sm-9 text-secondary"><?php echo $rows['email']; ?></div>
                 </div>
                 <hr />
                 <div class="row">
                   <div class="col-sm-3">
                     <h6 class="mb-0">Phone</h6>
                   </div>
-                  <div class="col-sm-9 text-secondary">(239) 816-9029</div>
-                </div>
-                <hr />
-                <div class="row">
-                  <div class="col-sm-3">
-                    <h6 class="mb-0">Mobile</h6>
-                  </div>
-                  <div class="col-sm-9 text-secondary">(320) 380-4539</div>
+                  <div class="col-sm-9 text-secondary"><?php echo $rows['phone']; ?></div>
                 </div>
                 <hr />
                 <div class="row">
@@ -96,20 +127,13 @@
                     <h6 class="mb-0">Address</h6>
                   </div>
                   <div class="col-sm-9 text-secondary">
-                    Madaraka, Nairobi, Kenya
+                  <?php echo $rows['Location']; ?>
                   </div>
                 </div>
+
+   
                 <hr />
-                <div class="row">
-                  <div class="col-sm-12">
-                    <a
-                      class="btn btn-primary"
-                      target="__blank"
-                      href="https://www.bootdey.com/snippets/view/profile-edit-data-and-skills"
-                      >Edit</a
-                    >
-                  </div>
-                </div>
+               
               </div>
             </div>
           </div>
@@ -119,47 +143,41 @@
       <hr/>
 
       <div class="pt-5 pb-3">
-          <a class="btn btn-primary" href="activities.html">View Activities</a>
-          <a class="btn btn-primary" href="permissions.html">Permissions</a>
+          <a class="btn btn-primary" href="mykids.php">View My Kids</a>
+         
       </div>
 
-      <div class="pt-5">
-          <h3 class="ml-3">Enroll your children</h3>
-      </div>
-      <div class="col-md-8 pb-5">
-        <div class="card mb-3">
-          <div class="card-body">
-            <div class="row">
-              <div class="col-sm-3">
-                <h6 class="mb-0">Full Name</h6>
-              </div>
-              <div class="col-sm-9 text-secondary">
-                  <input type="text" placeholder="Kenneth Mayor">
-              </div>
-            </div>
-            <hr />
-            <div class="row">
-              <div class="col-sm-3">
-                <h6 class="mb-0">Age</h6>
-              </div>
-              <div class="col-sm-9 text-secondary">
-                <input type="text" placeholder="1 year">
-              </div>
-            </div>
-            <hr />
-            <div class="row">
-                <div class="col-sm-3">
-                    <button class="mb-0 btn btn-primary btn-sm">Enroll</button>
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>     
+      <form action="parent_controls1.php" method ="POST" >
+                        <h4 class="text-dark">ADD NEW CHILD HERE </h4>
 
-                </div>
+            
+                        <input type="hidden" name ="userid" value ="<?php echo  $rows['user_id'];?>">
+                        <?php } ;?>
+                        <label class="text-dark" >FIRST NAME</label>
+                        <input type="text" name ="fname" class ="form-control" placeholder="Enter first name ">
+                       
+                        <label class="text-dark" >SECOND NAME</label>
+                        <input type="text" name ="sname" class ="form-control" placeholder="Enter second name ">
+                       
+                        <div class= "form-group">
+                        <label class="text-dark" >KID AGE</label>
+                        <input type="text" name ="kage"
+                        class ="form-control" placeholder="Enter Age ">
+                        </div>
+                
+                        <div class= "form-group">
+            
+                            <button type="submit" name ="save" class ="btn btn-primary">save</button>
+                
+                        </div>
+                    </form>
+                 </div>
               </div>
             </div>
           </div>
+          </div>    
     </div>
+  
+  
   </body>
 </html>

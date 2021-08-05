@@ -15,8 +15,8 @@ if(isset($_POST['save']))
     $parid=$_POST['userid'];
     $firname=$_POST['fname'];
     $secname=$_POST['sname'];
-    $kidage=$_POST['kage']; 
-    
+    $kidage=$_POST['kage'];
+
     enrol_kid_func($parid,$firname,$secname,$kidage);
 header('mykids.php');
 $_SESSION['message']= "Record has been saved";
@@ -24,7 +24,7 @@ $_SESSION['msg_type']= "Success";
 
 
 }
-   
+
 
 ?>
 
@@ -97,7 +97,7 @@ $_SESSION['msg_type']= "Success";
           <?php // LOOP TILL END OF DATA
           while ($rows = mysqli_fetch_array($result)) {
           ?>
-         
+
           <div class="col-md-8">
             <div class="card mb-3">
               <div class="card-body">
@@ -131,9 +131,9 @@ $_SESSION['msg_type']= "Success";
                   </div>
                 </div>
 
-   
+
                 <hr />
-               
+
               </div>
             </div>
           </div>
@@ -144,40 +144,40 @@ $_SESSION['msg_type']= "Success";
 
       <div class="pt-5 pb-3">
           <a class="btn btn-primary" href="mykids.php">View My Kids</a>
-         
+
       </div>
 
       <form action="parent_controls1.php" method ="POST" >
                         <h4 class="text-dark">ADD NEW CHILD HERE </h4>
 
-            
+
                         <input type="hidden" name ="userid" value ="<?php echo  $rows['user_id'];?>">
                         <?php } ;?>
                         <label class="text-dark" >FIRST NAME</label>
                         <input type="text" name ="fname" class ="form-control" placeholder="Enter first name ">
-                       
+
                         <label class="text-dark" >SECOND NAME</label>
                         <input type="text" name ="sname" class ="form-control" placeholder="Enter second name ">
-                       
+
                         <div class= "form-group">
                         <label class="text-dark" >KID AGE</label>
                         <input type="text" name ="kage"
                         class ="form-control" placeholder="Enter Age ">
                         </div>
-                
+
                         <div class= "form-group">
-            
+
                             <button type="submit" name ="save" class ="btn btn-primary">save</button>
-                
+
                         </div>
                     </form>
                  </div>
               </div>
             </div>
           </div>
-          </div>    
+          </div>
     </div>
-  
-  
+
+
   </body>
 </html>

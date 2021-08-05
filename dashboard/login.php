@@ -1,27 +1,16 @@
-<?php
-if(!isset($_SESSION)){session_start();}
-if (isset($_SESSION['uid'])) {
-	echo "<script type='text/javascript'> document.location ='./'; </script>";
-}
- ?>
+ <?php
+ if(!isset($_SESSION)) {session_start();}
+ if(isset($_SESSION['log']))
+ {
+   if($_SESSION['log']=='locked'){
+		 echo '<script>window.top.location.href = "./home";</script>';
+   } else {
+		 echo '<script>window.top.location.href = "./";</script>';
+   }
+ }
+  ?>
 <!DOCTYPE html>
-<!--
-Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
-Version: 3.3.0
-Author: KeenThemes
-Website: http://www.keenthemes.com/
-Contact: support@keenthemes.com
-Follow: www.twitter.com/keenthemes
-Like: www.facebook.com/keenthemes
-Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
-License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
--->
-<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
-<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
-<!--[if !IE]><!-->
 <html lang="en">
-<!--<![endif]-->
-<!-- BEGIN HEAD -->
 <head>
 <meta charset="utf-8"/>
 <title>Funbrain | Auth</title>
@@ -36,12 +25,8 @@ License: You must have a valid license purchased only from themeforest(the above
 	<script src="https://apis.google.com/js/platform.js" async defer></script>
   <script>
 		function onSignIn(googleUser) {
-			// Useful data for your client-side scripts:
 			var profile = googleUser.getBasicProfile();
-			//console.log("Image URL: " + profile.getImageUrl());
-			//console.log("Email: " + profile.getEmail());
 			window.location.href = "auth_action.php?g_l="+profile.getEmail()+"&g_img="+profile.getImageUrl()+"";
-			// The ID token you need to pass to your backend:
 			var id_token = googleUser.getAuthResponse().id_token;
 			console.log("ID Token: " + id_token);
 			var auth2 = gapi.auth2.getAuthInstance();

@@ -1,5 +1,5 @@
 /*********************************
- METRONIC ROUNDED STYLE COMPONENTS 
+ METRONIC ROUNDED STYLE COMPONENTS
 *********************************/
 /***
 General reset
@@ -15,8 +15,8 @@ body {
 }
 
 /*
- Internet Explorer 10 doesn't differentiate device width from viewport width, and thus doesn't 
- properly apply the media queries in Bootstrap's CSS. To address this, 
+ Internet Explorer 10 doesn't differentiate device width from viewport width, and thus doesn't
+ properly apply the media queries in Bootstrap's CSS. To address this,
  you can optionally include the following CSS and JavaScript to work around this problem until Microsoft issues a fix.
 */
 @-webkit-viewport {
@@ -35,8 +35,8 @@ body {
   width: device-width;
 }
 /*
- Internet Explorer 10 doesn't differentiate device width from viewport width, 
- and thus doesn't properly apply the media queries in Bootstrap's CSS. To address this, following CSS code applied 
+ Internet Explorer 10 doesn't differentiate device width from viewport width,
+ and thus doesn't properly apply the media queries in Bootstrap's CSS. To address this, following CSS code applied
 */
 @-ms-viewport {
   width: auto !important;
@@ -1273,7 +1273,7 @@ Users
 }
 
 /***
-Top News Blocks(new in v1.2.2) 
+Top News Blocks(new in v1.2.2)
 ***/
 .top-news {
   color: #fff;
@@ -1721,7 +1721,7 @@ Simple Line Icons Demo
     width: 33.333%;
   }
 }
-/*** 
+/***
 Glyphicons Demo
 ***/
 .glyphicons-demo ul {
@@ -2551,7 +2551,7 @@ Chats
 }
 
 /***
-Customized Bootstrap Close Icon 
+Customized Bootstrap Close Icon
 ***/
 .close {
   display: inline-block;
@@ -4026,7 +4026,7 @@ Metro icons
 }
 
 /***
-Customized Bootstrap Modal 
+Customized Bootstrap Modal
 ***/
 .modal {
   z-index: 10050;
@@ -5845,7 +5845,7 @@ Light Table
 }
 
 /***
-Customized Bootstrap Tabs 
+Customized Bootstrap Tabs
 ***/
 /* Tabs and pills */
 .nav-tabs,
@@ -8421,7 +8421,7 @@ Green Haze
 /* Button */
 .green-haze.btn {
   color: #FFFFFF;
-  background-color: #44b6ae;
+  background-color: #0684ff;
 }
 .green-haze.btn:hover, .green-haze.btn:focus, .green-haze.btn:active, .green-haze.btn.active {
   color: #FFFFFF;
@@ -8442,22 +8442,22 @@ Green Haze
   background-image: none;
 }
 .green-haze.btn.disabled, .green-haze.btn.disabled:hover, .green-haze.btn.disabled:focus, .green-haze.btn.disabled:active, .green-haze.btn.disabled.active, .green-haze.btn[disabled], .green-haze.btn[disabled]:hover, .green-haze.btn[disabled]:focus, .green-haze.btn[disabled]:active, .green-haze.btn[disabled].active, fieldset[disabled] .green-haze.btn, fieldset[disabled] .green-haze.btn:hover, fieldset[disabled] .green-haze.btn:focus, fieldset[disabled] .green-haze.btn:active, fieldset[disabled] .green-haze.btn.active {
-  background-color: #44b6ae;
+  background-color: #0684ff;
 }
 .green-haze.btn .badge {
-  color: #44b6ae;
+  color: #0684ff;
   background-color: #FFFFFF;
 }
 
 /* Button Strip */
 .btn.green-haze-stripe {
-  border-left: 3px solid #44b6ae;
+  border-left: 3px solid #0684ff;
 }
 
 /* Portlet */
 .portlet > .portlet-body.green-haze,
 .portlet.green-haze {
-  background-color: #44b6ae;
+  background-color: #0684ff;
 }
 
 .portlet.solid.green-haze > .portlet-title,
@@ -8495,7 +8495,7 @@ Green Haze
   border-top: 0;
 }
 .portlet.box.green-haze > .portlet-title {
-  background-color: #44b6ae;
+  background-color: #0684ff;
 }
 .portlet.box.green-haze > .portlet-title > .caption {
   color: #FFFFFF;
@@ -8519,7 +8519,7 @@ Green Haze
 
 /* Statistic Block */
 .dashboard-stat.green-haze {
-  background-color: #44b6ae;
+  background-color: #0684ff;
 }
 .dashboard-stat.green-haze.dashboard-stat-light:hover {
   background-color: #3ea7a0;
@@ -8544,19 +8544,19 @@ Green Haze
 
 /* General Element */
 .bg-green-haze {
-  border-color: #44b6ae !important;
+  border-color: #0684ff !important;
   background-image: none !important;
-  background-color: #44b6ae !important;
+  background-color: #0684ff !important;
   color: #FFFFFF !important;
 }
 
 /* General Text & Icon Font Colors */
 .font-green-haze {
-  color: #44b6ae !important;
+  color: #0684ff !important;
 }
 
 .progress-bar.green-haze {
-  background: #44b6ae !important;
+  background: #0684ff !important;
   color: #FFFFFF !important;
 }
 
@@ -8711,7 +8711,7 @@ Green Sharp
 /* Button */
 .green-sharp.btn {
   color: #FFFFFF;
-  background-color: #4DB3A2;
+  background-color: #0684ff;
 }
 .green-sharp.btn:hover, .green-sharp.btn:focus, .green-sharp.btn:active, .green-sharp.btn.active {
   color: #FFFFFF;
@@ -8732,22 +8732,22 @@ Green Sharp
   background-image: none;
 }
 .green-sharp.btn.disabled, .green-sharp.btn.disabled:hover, .green-sharp.btn.disabled:focus, .green-sharp.btn.disabled:active, .green-sharp.btn.disabled.active, .green-sharp.btn[disabled], .green-sharp.btn[disabled]:hover, .green-sharp.btn[disabled]:focus, .green-sharp.btn[disabled]:active, .green-sharp.btn[disabled].active, fieldset[disabled] .green-sharp.btn, fieldset[disabled] .green-sharp.btn:hover, fieldset[disabled] .green-sharp.btn:focus, fieldset[disabled] .green-sharp.btn:active, fieldset[disabled] .green-sharp.btn.active {
-  background-color: #4DB3A2;
+  background-color: #0684ff;
 }
 .green-sharp.btn .badge {
-  color: #4DB3A2;
+  color: #0684ff;
   background-color: #FFFFFF;
 }
 
 /* Button Strip */
 .btn.green-sharp-stripe {
-  border-left: 3px solid #4DB3A2;
+  border-left: 3px solid #0684ff;
 }
 
 /* Portlet */
 .portlet > .portlet-body.green-sharp,
 .portlet.green-sharp {
-  background-color: #4DB3A2;
+  background-color: #0684ff;
 }
 
 .portlet.solid.green-sharp > .portlet-title,
@@ -8785,7 +8785,7 @@ Green Sharp
   border-top: 0;
 }
 .portlet.box.green-sharp > .portlet-title {
-  background-color: #4DB3A2;
+  background-color: #0684ff;
 }
 .portlet.box.green-sharp > .portlet-title > .caption {
   color: #FFFFFF;
@@ -8809,7 +8809,7 @@ Green Sharp
 
 /* Statistic Block */
 .dashboard-stat.green-sharp {
-  background-color: #4DB3A2;
+  background-color: #0684ff;
 }
 .dashboard-stat.green-sharp.dashboard-stat-light:hover {
   background-color: #46a595;
@@ -8834,19 +8834,19 @@ Green Sharp
 
 /* General Element */
 .bg-green-sharp {
-  border-color: #4DB3A2 !important;
+  border-color: #0684ff !important;
   background-image: none !important;
-  background-color: #4DB3A2 !important;
+  background-color: #0684ff !important;
   color: #FFFFFF !important;
 }
 
 /* General Text & Icon Font Colors */
 .font-green-sharp {
-  color: #4DB3A2 !important;
+  color: #0684ff !important;
 }
 
 .progress-bar.green-sharp {
-  background: #4DB3A2 !important;
+  background: #0684ff !important;
   color: #FFFFFF !important;
 }
 

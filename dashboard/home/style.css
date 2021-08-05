@@ -1,0 +1,284 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+body {
+  margin: 0;
+  height: 100vh;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+.bg:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  background-image: url("img/bg2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.content {
+  position: relative;
+}
+body,html{
+  margin: 0;
+  padding: 0;
+}
+h1{
+  color: #fff;
+}
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: black;
+}
+body header {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px;
+  align-items: center;
+  font-size: small;
+}
+body header .header-link {
+  padding-left: 15px;
+  text-decoration: unset;
+  color: white;
+  padding-left: 15px;
+}
+body header .header-link:nth-child(2) {
+  padding-right: 15px;
+}
+body header .header-link:hover {
+  text-decoration: underline;
+}
+body header .apps-icon {
+  height: 22px;
+  width: auto;
+  margin: 0 20px 0 15px;
+  fill: currentColor;
+  filter: invert(1);
+  opacity: 0.8;
+  cursor: pointer;
+}
+body header .img-profile {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-image: url(https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+  border-radius: 50%;
+  cursor: pointer;
+  background-position: center;
+  background-size: cover;
+}
+body .logo-container {
+  width: 100%;
+  display: flex;
+  height: 100px;
+
+}
+body .logo-container .main-logo {
+  width: 272px;
+  height: 92px;
+  background: url('../../games/images/funbrainlogo.png');
+  margin: auto;
+  background-size: 100px 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+body .input-container {
+  letter-spacing: normal;
+  word-spacing: normal;
+  width: 80%;
+  min-width: 300px;
+  max-width: 580px;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+}
+body .input-container:before {
+  content: " ";
+  background-image: url("https://img.icons8.com/ios/24/000000/search--v1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  transform: scale(0.7);
+  cursor: pointer;
+}
+body .input-container:after {
+  content: " ";
+  background-image: url("https://img.icons8.com/material-rounded/24/000000/microphone.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  transform: scale(0.9);
+  right: 5px;
+  cursor: pointer;
+}
+body .input-container #search {
+  font-size: 16px;
+  width: 100%;
+  align-self: center;
+  border-radius: 22px;
+  height: 44px;
+  border: none;
+  box-sizing: border-box;
+  padding-left: 40px;
+  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+}
+body .input-container #search:focus {
+  outline: none;
+}
+body .input-container #search:focus::placeholder {
+  color: transparent;
+}
+body .last-visited-grid {
+  width: 100%;
+  max-width: 580px;
+  margin: auto;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(116px, 1fr));
+  grid-auto-rows: 116px;
+}
+body .last-visited-grid .app {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+  border-radius: 3px;
+  cursor: pointer;
+}
+body .last-visited-grid .app span {
+  font-weight: 500;
+  font-size: 12px;
+  color: white;
+}
+body .last-visited-grid .app:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+body .last-visited-grid .app:hover::before {
+  content: "⋮";
+  color: white;
+  font-size: 20px;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  right: 5px;
+  animation: fadeIn 0.2s ease-in-out;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+@media only screen and (max-width: calc(116px* 5)) {
+  body .last-visited-grid .app.amazon {
+    display: none;
+  }
+  body .last-visited-grid .app.apple {
+    display: none;
+  }
+}
+@media only screen and (max-width: calc(116px* 4)) {
+  body .last-visited-grid .app.instagram {
+    display: none;
+  }
+  body .last-visited-grid .app.github {
+    display: none;
+  }
+}
+body footer {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 20px;
+}
+body footer a {
+  color: white;
+  font-size: small;
+  font-family: "Roboto";
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+}
+body footer a .link-icon {
+  padding-right: 5px;
+  width: 18px;
+  height: 18px;
+  filter: invert(1);
+}
+body footer .edit-icon {
+  position: fixed;
+  width: 16px;
+  height: 16px;
+  padding: 5px;
+  right: 15px;
+  bottom: 15px;
+  filter: invert(1);
+  cursor: pointer;
+  border-radius: 50%;
+}
+body footer .edit-icon:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+.sleep{
+  text-align: center;
+  top:0;
+  bottom:0;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.8;
+  z-index: 1000;
+  vertical-align: middle !important;
+  display: none;
+}
+.sleep h1 {
+}
+
+.clock {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  color: #17D4FE;
+  font-size: 60px;
+  font-family: Orbitron;
+  letter-spacing: 7px;
+
+
+
+}
+div.app img{
+  height: 48px !important;
+  width: 48px !important;
+}

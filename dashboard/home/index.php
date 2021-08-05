@@ -28,11 +28,18 @@ if(isset($_SESSION['log']))
 
  if(isset($_GET['id'])){
    $kid_id = $_GET['id'];
-   $sql4 = "SELECT * FROM kids where kid_id = '$kid_id' ";
+   $sql4 = "SELECT * FROM kids where kid_id = '$kid_id' and parent_id = '".$_SESSION['uid']."'";
    $result4 = $mysqli->query($sql4);
-   $result = $mysqli->query($sql4);
-   $sql5 = "SELECT * FROM controls where kid_id = '$kid_id' ";
-   $result5 = $mysqli->query($sql5);
+   if(mysqli_num_rows($result4)>0){
+     while ($rows3a = mysqli_fetch_array($result4)) {
+       $sql5 = "SELECT * FROM controls where kid_id = '".$rows3a['kid_id']."'";
+       $result5 = $mysqli->query($sql5);
+     }
+   }else {
+     $_GET['id'] = 'all';
+   }
+
+
  }
 
  $mysqli->close();
@@ -102,12 +109,12 @@ if(isset($_SESSION['log']))
 							<li>
 								<a href="extra_profile.php">
 								<i class="icon-user"></i> 	<?php if (isset($_SESSION['name'])) {
-										echo $_SESSION['name'];
+										echo $_SESSION['name'].'(Parent)';
 									} ?> </a>
 							</li>
 								<li>
 									<a>
-									<b></i> Switch user </a></b>
+									<b></i> Select user </a></b>
 								</li>
                 <?php // LOOP TILL END OF DATA
                   while ($rows3 = mysqli_fetch_array($result3)) {
@@ -192,7 +199,7 @@ if(isset($_SESSION['log']))
     <?php
     $perm = '';
     $chg=$chp=$cho='not';
-    if(isset($_GET['id'])){
+    if(isset($_GET['id']) && $_GET['id']!='all'){
     while ($rows5 = mysqli_fetch_array($result5)) {
 ?>
 <center><p style="color:white"><b>Allowed Content:</b> (
@@ -223,7 +230,9 @@ $chg='1';
 
 <?php }
 
-};?>
+}else {
+  echo '<center><p style="color:white">Select an account from the top-right corner to continue</p><center>';
+}?>
 <style media="screen">
   .not {
     cursor: not-allowed!important;
@@ -268,10 +277,13 @@ $chg='1';
         <img src="img/stories.png" />
         <span>Stories</span>
       </div>
-      <div class="app amazon">
-        <img src="img/home.ico" />
-        <span>Home</span>
-      </div>
+      <a href="../../">
+        <div class="app amazon">
+          <img src="img/home.ico" />
+          <span>Home</span>
+        </div>
+      </a>
+
     </div>
 
 

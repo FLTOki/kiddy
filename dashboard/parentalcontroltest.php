@@ -19,6 +19,21 @@ function connect_func()
 }
 
 
+//get kid name
+function getKname($kid,$pid){
+	$conn=connect_func();
+	$sql4 = "SELECT * FROM kids where kid_id = '$kid' and parent_id = '".$pid."'";
+	$result3 = $conn->query($sql4);
+	if(mysqli_num_rows($result3)>0){
+		while ($rows3 = mysqli_fetch_array($result3)) {
+			return $rows3['first_name']." ".$rows3['last_name'];
+		 }
+	}else {
+			return 'all';
+	}
+
+}
+
 //Enrol Kid function
 
 

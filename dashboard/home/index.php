@@ -18,7 +18,8 @@ if(isset($_SESSION['log']))
  <?php
  include '../parentalcontroltest.php';
  $mysqli =connect_func();
-
+ $kidname = '';
+ $kidid = '';
  // SQL query to select data from database
  $sql = "SELECT * FROM user where user_id = '".$_SESSION['uid']."'";
  $result1 = $mysqli->query($sql);
@@ -27,6 +28,8 @@ if(isset($_SESSION['log']))
  $result3 = $mysqli->query($sql2);
 
  if(isset($_GET['id'])){
+   $kidname = getKname($_GET['id'],$_SESSION['uid']);
+
    $kid_id = $_GET['id'];
    $sql4 = "SELECT * FROM kids where kid_id = '$kid_id' and parent_id = '".$_SESSION['uid']."'";
    $result4 = $mysqli->query($sql4);
@@ -34,6 +37,7 @@ if(isset($_SESSION['log']))
      while ($rows3a = mysqli_fetch_array($result4)) {
        $sql5 = "SELECT * FROM controls where kid_id = '".$rows3a['kid_id']."'";
        $result5 = $mysqli->query($sql5);
+       $kidid = $rows3a['kid_id'];
      }
    }else {
      $_GET['id'] = 'all';
@@ -88,7 +92,7 @@ if(isset($_SESSION['log']))
 <link href="style.css" rel="stylesheet" type="text/css"/>
 <!-- END THEME STYLES -->
 <link rel="shortcut icon" href="favicon.ico"/>
-</head
+</head>
 <body>
 <div class="bg">
   <div class="content">
@@ -241,42 +245,60 @@ $chg='1';
   }
 </style>
     <div class="last-visited-grid">
-      <div class="app dropbox <?php echo $chg; ?>">
-        <img src="img/fun.ico" />
-        <span>Fun Games</span>
-      </div>
-      <div class="app youtube <?php echo $chg; ?>">
-        <img src="img/learn.png" />
-        <span>Learning Games</span>
-      </div>
-      <div class="app facebook <?php echo $cho; ?>">
-        <img src="img/sheets.png" />
-        <span>Work Sheets</span>
-      </div>
-      <div class="app twitter <?php echo $cho; ?>">
-        <img src="img/color.png" />
-        <span>Coloring Pages</span>
-      </div>
-      <div class="app gmail <?php echo $cho; ?>">
-        <img src="img/download.ico" />
-        <span>Downloads</span>
-      </div>
-      <div class="app whatsapp <?php echo $chg; ?>" >
-        <img src="img/funroom.png" />
-        <span>Fun Room</span>
-      </div>
-      <div class="app github <?php echo $chg; ?>">
-        <img src="img/videos.jfif" />
-        <span>Videos</span>
-      </div>
-      <div class="app instagram <?php echo $chg; ?>">
-        <img src="img/songs.png" />
-        <span>Songs</span>
-      </div>
-      <div class="app apple <?php echo $cho; ?>">
-        <img src="img/stories.png" />
-        <span>Stories</span>
-      </div>
+    <a href="game.php?kidid=<?php echo $kidid ?>&&name=<?php echo $kidname ?>&&cat=" class="<?php echo $chg; ?>">
+        <div class="app dropbox <?php echo $chg; ?>">
+          <img src="img/fun.ico" />
+          <span>Fun Games</span>
+        </div>
+    </a>
+      <a href="game.php?kidid=<?php echo $kidid ?>&&name=<?php echo $kidname ?>&&cat=Learning Games" class="<?php echo $chg; ?>">
+        <div class="app youtube <?php echo $chg; ?>">
+          <img src="img/learn.png" />
+          <span>Learning Games</span>
+        </div>
+    </a>
+      <a href="game.php?kidid=<?php echo $kidid ?>&&name=<?php echo $kidname ?>&&cat=Work Sheets" class="<?php echo $cho; ?>">
+        <div class="app facebook <?php echo $cho; ?>">
+          <img src="img/sheets.png" />
+          <span>Work Sheets</span>
+        </div>
+    </a>
+      <a href="game.php?kidid=<?php echo $kidid ?>&&name=<?php echo $kidname ?>&&cat=Coloring Pages" class="<?php echo $cho; ?>">
+        <div class="app twitter <?php echo $cho; ?>">
+          <img src="img/color.png" />
+          <span>Coloring Pages</span>
+        </div>
+    </a>
+      <a href="game.php?kidid=<?php echo $kidid ?>&&name=<?php echo $kidname ?>&&cat=Downloads" class="<?php echo $cho; ?>">
+        <div class="app gmail <?php echo $cho; ?>">
+          <img src="img/download.ico" />
+          <span>Downloads</span>
+        </div>
+    </a>
+      <a href="game.php?kidid=<?php echo $kidid ?>&&name=<?php echo $kidname ?>&&cat=Fun Room" class="<?php echo $chg; ?>">
+        <div class="app whatsapp <?php echo $chg; ?>" >
+          <img src="img/funroom.png" />
+          <span>Fun Room</span>
+        </div>
+    </a>
+      <a href="game.php?kidid=<?php echo $kidid ?>&&name=<?php echo $kidname ?>&&cat=Videos" class="<?php echo $chg; ?>">
+        <div class="app github <?php echo $chg; ?>">
+          <img src="img/videos.jfif" />
+          <span>Videos</span>
+        </div>
+    </a>
+      <a href="game.php?kidid=<?php echo $kidid ?>&&name=<?php echo $kidname ?>&&cat=Songs" class="<?php echo $chg; ?>">
+        <div class="app instagram <?php echo $chg; ?>">
+          <img src="img/songs.png" />
+          <span>Songs</span>
+        </div>
+    </a>
+      <a href="game.php?kidid=<?php echo $kidid ?>&&name=<?php echo $kidname ?>&&cat=Stories" class="<?php echo $cho; ?>">
+        <div class="app apple <?php echo $cho; ?>">
+          <img src="img/stories.png" />
+          <span>Stories</span>
+        </div>
+    </a>
       <a href="../../">
         <div class="app amazon">
           <img src="img/home.ico" />
@@ -286,61 +308,6 @@ $chg='1';
 
     </div>
 
-
-    </footer>
-  </div>
-</div>
-
-
-<div :id="image.modal_id"
-		 class="modal animated bounceIn"
-		 tabindex="-1"
-		 role="dialog"
-		 :aria-labelledby="'h'+image.modal_id"
-		 aria-hidden="true">
-
-	<!-- dialog -->
-	<div class="modal-dialog">
-
-		<!-- content -->
-		<div class="modal-content">
-
-			<!-- header -->
-			<div class="modal-header">
-				<h1 :id="'h'+image.modal_id"
-						class="modal-title">
-					{{ image.name }}
-				</h1>
-				<p class="text-left text-muted" style="color:white!important;">Name</p>
-			</div>
-			<!-- header -->
-
-			<!-- body -->
-			<div class="modal-body">
-			<iframe src="" width="100%" height="100%" :id="'fr' + image.modal_id"  sandbox="allow-scripts allow-forms	 allow-same-origin" allowfullscreen></iframe>
-			</div>
-			<!-- body -->
-
-			<!-- footer -->
-			<div class="modal-footer">
-
-				<button class="btn btn-danger"
-								data-dismiss="modal" v-on:click="stopVideo('fr'+image.modal_id)">
-					Exit
-				</button>
-				<button class="btn btn-primary">
-					Restart
-				</button>
-			</div>
-			<!-- footer -->
-
-		</div>
-		<!-- content -->
-
-	</div>
-	<!-- dialog -->
-
-</div>
 		<footer>
 		<p style="color:white"><span id="time"></span><br><br>&copy 2021 Funbrain  </p>
 	</footer>
@@ -422,6 +389,9 @@ Demo.init(); // init demo features
 	</script>
 
 <!-- END JAVASCRIPTS -->
+
+</div>
+</div>
 </body>
 <!-- END BODY -->
 </html>
